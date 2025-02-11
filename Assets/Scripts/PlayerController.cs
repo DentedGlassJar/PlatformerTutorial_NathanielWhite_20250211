@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
         // Normal movement
         UpdateVisualFeedback();
 
-        if (transform.position.y < -1000f) {
+        if (transform.position.y < -50f) {
             CheckpointManager.TeleportPlayerToCheckpoint(gameObject);
             if (CameraFollower)
                 CameraFollower.transform.position = gameObject.transform.position;
