@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e3d47823abc2645bc1f88c55ff2cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 4f356b43692b7e140b2b70cbf2fa27ed, type: 3}
   hasAttractionEffect: 1
   pickupDistance: 1
+  pickupAmount: 1
   baseRotationSpeed: {x: 0, y: 80, z: 0}
   attractionSpinBoost: {x: 10, y: 20, z: 10}
   attractionRadius: 7

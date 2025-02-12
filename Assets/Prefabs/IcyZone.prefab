@@ -121,4 +121,3 @@ MonoBehaviour:
   slipperiness: 0.966
   affectPlayer: 1
   slideSound: {fileID: 0}
-  slideVolume: 0.5

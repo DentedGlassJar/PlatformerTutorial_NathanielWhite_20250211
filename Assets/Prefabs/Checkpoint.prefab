@@ -124,7 +124,7 @@ MonoBehaviour:
   inactiveMaterial: {fileID: 2100000, guid: f7fe720bdb8d2a64e8c19b5e3a44a188, type: 2}
   activeMaterial: {fileID: 2100000, guid: 9ed9a00ddfa315444a3c5ea8eb6b56ce, type: 2}
   activationEffect: {fileID: 0}
-  activationSound: {fileID: 0}
+  activationSound: {fileID: 8300000, guid: c32dadc8f8b809c4db1e51eb465c6501, type: 3}
   onCheckpointActivated:
     m_PersistentCalls:
       m_Calls: []

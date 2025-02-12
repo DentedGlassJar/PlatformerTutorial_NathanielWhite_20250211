@@ -107,8 +107,8 @@ MonoBehaviour:
   chainJumpWindow: 0.1
   jumpBufferTime: 0.17
   groundedTimeBeforeJump: 0.12
-  jumpAudio: {fileID: 0}
-  landAudio: {fileID: 0}
+  jumpAudio: {fileID: 8300000, guid: 10ded5155d3d26848978ecc30a004f54, type: 3}
+  landAudio: {fileID: 8300000, guid: 8b4c391616e051449b60cfd2a9cb32f7, type: 3}
   onJumpPerformed:
     m_PersistentCalls:
       m_Calls: []
@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionAudioClip: {fileID: 0}
-  damageAudioClip: {fileID: 0}
-  deathAudioClip: {fileID: 0}
+  damageAudioClip: {fileID: 8300000, guid: 24e625d648df55840bd9600a1c2676b3, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: 0c85ba18c7fc05e429df36f2b17e4812, type: 3}
   health: 20
   takesCollisionDamageFromRigidbodies: 0
   takesCollisionDamageFromStaticbodies: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   dashDuration: 0.3
   dashCooldown: 1
   airDashUpwardsForce: 0.5
-  dashAudio: {fileID: 0}
+  dashAudio: {fileID: 8300000, guid: 0123a2353dcfc744f9268805330a2e43, type: 3}
   dashParticles: {fileID: 0}
   dashInvulnerability: 1
   dashCurve:

@@ -120,13 +120,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flying: 0
   playerBounceForce: {x: 0, y: 13, z: 0}
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: a4b3cc78816a3594ca669fd868e7341f, type: 3}
   knockbackForce: 12
   knockbackHeight: 10
   contactDamage: 1
   enableChasing: 1
   ignoreHeight: 1
   minTargetDistance: 0.7
+  collidesWithInvulnerable: 0
   visionSensor: {fileID: 11400004}
   attackSensor: {fileID: 11400006}
 --- !u!114 &5347145844791443438
@@ -142,10 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionAudioClip: {fileID: 0}
-  damageAudioClip: {fileID: 0}
-  deathAudioClip: {fileID: 0}
+  damageAudioClip: {fileID: 8300000, guid: 2b761d90618759f489868c0f923daaa8, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: 5dfa2a690778f2b4da0ce1ecfdb39ebc, type: 3}
   health: 4
-  takesCollisionDamage: 1
+  takesCollisionDamageFromRigidbodies: 0
+  takesCollisionDamageFromStaticbodies: 0
   minCollisionDamageVelocity: 0.2
   shouldRespawn: 0
   respawnAfterSeconds: 1.5
