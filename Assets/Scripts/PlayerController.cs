@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     private HealthController healthComponent;
     private PlayerInput playerInput;
+
+    // A variable used to get the reference to the projectile GameObject    
+    public GameObject projectileObj;
     
     public bool JoinedThroughGameManager { get; set; } = false;
     public static List<PlayerController> players = new List<PlayerController>();
@@ -137,6 +140,17 @@ public class PlayerController : MonoBehaviour
         CameraFollower.OrbitInput = inputVal.Get<float>();
     }
 
+    // --NATHANIEL'S--
+    // This methods does two things, it makes the forward vector of where the pellets will go equal to the camera's forward vector, and
+    // it'll check and see if the player pressed the left mouse button.
+    public void OnShoot()
+    {
+        Debug.Log("Player has shot a pellet");
+
+        // Makes a clone of the projectile Prefab, that spawns from the player's position and has a rotation of zero.
+        Instantiate(projectileObj, new Vector3(0.27f, 6.6f, -1.82f), Quaternion.identity);
+    }
+
     /// <summary>
     /// Calculate movement direction based on camera orientation
     /// </summary>
@@ -181,13 +195,5 @@ public class PlayerController : MonoBehaviour
         characterAnimator.SetFloat(MovementController.AnimationID_DistanceToTarget, moveController.distanceToDestination);
         characterAnimator.SetBool(MovementController.AnimationID_IsGrounded, moveController.isGrounded);
         characterAnimator.SetFloat(MovementController.AnimationID_YVelocity, rb.velocity.y);
-    }
-
-    // --NATHANIEL'S--
-    // This methods does two things, it makes the forward vector of where the pellets will go equal to the camera's forward vector, and
-    // it'll check and see if the player pressed the left mouse button.
-    public void OnShoot()
-    {
-        Debug.Log("Player has shot a pellet");
     }
 } 
