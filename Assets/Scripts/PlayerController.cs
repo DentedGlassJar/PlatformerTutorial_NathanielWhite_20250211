@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,6 +27,24 @@ public class PlayerController : MonoBehaviour
 
     // A variable used to get the reference to the projectile GameObject    
     public GameObject projectileObj;
+
+    // A variable used to get the reference of the projectile's rigidbody
+    private Rigidbody pelletRb;
+
+    // A bool that checks to see if the player has shot a pellet, and that it hasn't disappeared yet
+    private bool hasPelletBeenUsed;
+
+    // A vector3 that gets the forward of the player gameObject
+    private Vector3 fwd;
+
+    // A variable used to check the distance between the player and the pellet
+    private Vector3 direction;
+
+    // A float used for setting the maximum length the direction variable can go to
+    private float maxLength = 10f;
+
+    // A float used for multiplying with the forward vector of the player gameObject
+    private float pelletPower = 5f;
     
     public bool JoinedThroughGameManager { get; set; } = false;
     public static List<PlayerController> players = new List<PlayerController>();
@@ -90,6 +109,9 @@ public class PlayerController : MonoBehaviour
             return;
         }
         CheckpointManager.TeleportPlayerToCheckpoint(gameObject);
+
+        // Makes the hasPelletBeenUsed variable false
+        hasPelletBeenUsed = false;
     }
 
     /// <summary>
@@ -145,10 +167,29 @@ public class PlayerController : MonoBehaviour
     // it'll check and see if the player pressed the left mouse button.
     public void OnShoot()
     {
-        Debug.Log("Player has shot a pellet");
+        // Checks and makes the fwd variable equal the player's forward vector
+        fwd = gameObject.transform.forward;
 
-        // Makes a clone of the projectile Prefab, that spawns from the player's position and has a rotation of zero.
-        Instantiate(projectileObj, new Vector3(0.27f, 6.6f, -1.82f), Quaternion.identity);
+        // Gets the distance between the player and the projectile
+        direction = gameObject.transform.position - projectileObj.transform.position;
+
+        if (hasPelletBeenUsed == false)
+        {
+            hasPelletBeenUsed = true;
+
+            // Makes a clone of the projectile Prefab, that spawns from the player's position and has a rotation of zero
+            projectileObj = Instantiate(projectileObj, gameObject.transform.position, gameObject.transform.rotation);
+
+            // Gets the rigidbody of the projectileObj
+            pelletRb = projectileObj.GetComponent<Rigidbody>();
+
+            // Checks to see if the distance between the player and pellet goes over the maxLength float, if it does it destroys the pellet
+            // and makes it so you can shoot again
+            if (direction.magnitude >= maxLength)
+            {
+                Debug.Log($"Pellet is destroyed!");
+            }
+        }
     }
 
     /// <summary>
@@ -162,6 +203,9 @@ public class PlayerController : MonoBehaviour
         cameraAlignedRight = cameraRotation * Vector3.right;
         
         moveDirection = ((cameraAlignedForward * inputVector.y) + (cameraAlignedRight * inputVector.x)).normalized;
+
+        // Makes the pellet gameObject go in the direction of the player's forward vector, times the float variable pelletPower
+        pelletRb.AddForce(fwd * pelletPower);
     }
 
     /// <summary>
