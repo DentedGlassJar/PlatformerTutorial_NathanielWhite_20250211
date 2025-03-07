@@ -183,4 +183,11 @@ public class PlayerController : MonoBehaviour
         characterAnimator.SetFloat(MovementController.AnimationID_YVelocity, rb.velocity.y);
     }
 
+    // --NATHANIEL'S--
+    // This methods does two things, it makes the forward vector of where the pellets will go equal to the camera's forward vector, and
+    // it'll check and see if the player pressed the left mouse button.
+    public void OnShoot()
+    {
+        Debug.Log("Player has shot a pellet");
+    }
 } 
