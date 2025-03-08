@@ -118,8 +118,10 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    // Used to check if the collider other enters the trigger
     private void OnTriggerEnter(Collider other)
     {
+        // If the projectile hits the enemy, it takes damage
         if (other.gameObject.CompareTag("Projectile"))
         {
             gameObject.ApplyDamage(gameObject, 1);
