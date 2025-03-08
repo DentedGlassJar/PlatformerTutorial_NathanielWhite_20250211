@@ -6691,6 +6691,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8536874390419108766, guid: 321783673a3834f41adc2d5ebc40b8cb,
         type: 3}
+    - target: {fileID: 6205569379291981387, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: enemyObj
+      value: 
+      objectReference: {fileID: 100000, guid: 1ae09a28e711acc46940b6589c2f0127, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
