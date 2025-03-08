@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.Events;
 using System.Linq;
+using Unity.VisualScripting;
 
 /// <summary>
 /// Handles health, damage, and death behavior for game objects.
@@ -276,7 +277,6 @@ public class HealthController : MonoBehaviour
             if (Mathf.Max(collision.rigidbody.velocity.magnitude, collision.relativeVelocity.magnitude) < minCollisionDamageVelocity)
                 return false;
         }
-			
 		return true;
 	}
 	

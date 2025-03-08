@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 78809cbc93786b4438fd542ac0d8545f
+guid: 89217e50c5cc8344dbabec8b5c7816d2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - projectileObj: {instanceID: 0}
-  - pelletFiring: {fileID: 8300000, guid: 146d68675bd08db4281770de780a7e5e, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

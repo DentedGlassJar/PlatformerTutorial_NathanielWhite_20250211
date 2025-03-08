@@ -117,4 +117,12 @@ public class EnemyController : MonoBehaviour
             AudioSource.PlayClipAtPoint(bounceSound, transform.position);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            gameObject.ApplyDamage(gameObject, 1);
+        }
+    }
 } 

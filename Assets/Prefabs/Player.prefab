@@ -206,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileObj: {fileID: 3843495487355712117, guid: c92c1c486861db846b9c0f3b6987a91a,
     type: 3}
+  enemyObj: {fileID: 100000, guid: 1ae09a28e711acc46940b6589c2f0127, type: 3}
+  pelletFiring: {fileID: 8300000, guid: 146d68675bd08db4281770de780a7e5e, type: 3}
 --- !u!114 &-5442971658099831192
 MonoBehaviour:
   m_ObjectHideFlags: 0

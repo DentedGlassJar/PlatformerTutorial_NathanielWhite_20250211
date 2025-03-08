@@ -3424,6 +3424,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 5.86
       objectReference: {fileID: 0}
+    - target: {fileID: 4112613741385260204, guid: 1ae09a28e711acc46940b6589c2f0127,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5347145844791443438, guid: 1ae09a28e711acc46940b6589c2f0127,
         type: 3}
       propertyPath: deathSpawnables.Array.size
@@ -6666,6 +6671,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 1ae09a28e711acc46940b6589c2f0127, type: 3}
+      propertyPath: projectileObj
+      value: 
+      objectReference: {fileID: 3843495487355712117, guid: c92c1c486861db846b9c0f3b6987a91a,
+        type: 3}
     - target: {fileID: 13500000, guid: 1ae09a28e711acc46940b6589c2f0127, type: 3}
       propertyPath: m_Radius
       value: 5.86
@@ -15113,7 +15123,7 @@ PrefabInstance:
     - target: {fileID: 4276038905943757335, guid: edee158491bf2fd4f899b8f3c28723a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4276038905943757335, guid: edee158491bf2fd4f899b8f3c28723a5,
         type: 3}

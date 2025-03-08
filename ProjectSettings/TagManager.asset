@@ -11,7 +11,7 @@ TagManager:
   - Coin
   - Enemy
   - Water
-  - Target
+  - Projectile
   layers:
   - Default
   - TransparentFX
